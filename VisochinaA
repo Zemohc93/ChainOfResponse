@@ -1,0 +1,30 @@
+public class  VisochinaA implements MainChain{
+
+
+	public MainChain nextInChain;
+
+	@Override
+	public void setNextChain(MainChain nextChain) {
+		
+		this.nextInChain=nextChain;
+		
+	}
+
+	public void calculate(CalcType request) {
+		
+		if(request.getString()== "VisochinaA") {
+			int a=request.getNumberx();
+			int b=request.getNumbery();
+			int c=request.getNumberz();
+			int p=(a+b+c)/2;
+			double S = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+			double ha=(2*S)/a;
+			System.out.println("VisochinaA=" + ha);
+			//smqta visochinata kum A sprqmo a,b,c
+		}
+		else {
+			
+			System.out.println("No other options in this Chain");
+		}
+	}
+}
