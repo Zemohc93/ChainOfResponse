@@ -1,0 +1,24 @@
+
+public class Perimeter implements MainChain{
+
+	public MainChain nextInChain;
+
+	@Override
+	public void setNextChain(MainChain nextChain) {
+		
+		this.nextInChain=nextChain;
+		
+	}
+
+	public void calculate(CalcType request) {
+		
+		if(request.getString()== "Perimeter") {
+			int a=request.getNumberx();
+			int b=request.getNumbery();
+			int c=request.getNumberz();
+			System.out.println("P=" +a + "+" + b + "+" + c + "=" + (a+b+c));
+			//smqta perimetara
+		}else {
+			nextInChain.calculate(request);
+		}
+	}
