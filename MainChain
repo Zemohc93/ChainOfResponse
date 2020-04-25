@@ -1,0 +1,8 @@
+public interface MainChain {
+	
+	public abstract void setNextChain(MainChain nextChain);
+
+	public abstract void calculate(CalcType request);
+	
+	
+	}
