@@ -1,5 +1,5 @@
-public class  VisochinaC implements MainChain{
 
+public class Surface implements MainChain{
 
 	public MainChain nextInChain;
 
@@ -12,15 +12,14 @@ public class  VisochinaC implements MainChain{
 
 	public void calculate(CalcType request) {
 		
-		if(request.getString()== "VisochinaC") {
+		if(request.getString()== "Surface") {
 			int a=request.getNumberx();
 			int b=request.getNumbery();
 			int c=request.getNumberz();
 			int p=(a+b+c)/2;
 			double S = Math.sqrt(p*(p-a)*(p-b)*(p-c));
-			double hc=(2*S)/c;
-			System.out.println("VisochinaC=" + hc);
-			//smqta visochinata kum C sprqmo a,b,c
+			System.out.println("S=sqrt(p*(p-a)*(p-b)*(p-c)=" + S);
+			//smqta ploshtta sprqmo polu perimetara
 		}
 		else {
 			nextInChain.calculate(request);
