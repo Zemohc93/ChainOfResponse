@@ -1,0 +1,22 @@
+
+public class TestChain {
+		
+	public static void main(String[]args) {
+		
+		MainChain P1= new Perimeter();
+		MainChain S1= new Surface();
+		MainChain V1= new VisochinaB();
+		MainChain V2= new VisochinaC();
+		MainChain V3= new VisochinaA();
+		
+		P1.setNextChain(S1);//posochva kum koi chain da nasochi ako P1 nemoje da izpalni requesta
+		S1.setNextChain(V1);
+		V1.setNextChain(V2);
+		V2.setNextChain(V3);
+			
+		CalcType request = new CalcType(3,4,5,"VisochinaB");
+		
+		P1.calculate(request);		
+		
+	}
+}
