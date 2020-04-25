@@ -1,0 +1,24 @@
+
+public class CalcType {
+
+	
+	private int x;
+	private int y;
+	private int z;
+	
+	private String Requested;
+	
+	public CalcType(int x1, int y1 , int z1, String Requested1) {
+		
+		x=x1;
+		y=y1;
+		z=z1;
+		Requested=Requested1;
+		
+	}
+	
+	public int getNumberx() {return x;}
+	public int getNumbery() {return y;}
+	public int getNumberz() {return z;}
+	public String getString() {return Requested;}
+}
